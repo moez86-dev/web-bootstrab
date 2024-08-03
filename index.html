@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مانو كافيه</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: rgb(83, 195, 98);
+        }
+        .navbar-custom {
+
+            .navbar-brand {
+    max-width: 100px; /* تحديد عرض أقصى للشعار */
+}
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+.navbar-nav .nav-link {
+    font-size: 18px; /* تحديد حجم النص داخل الروابط */
+}
+            background-color: #1DA1F2; /* لون أزرق سماوي للناف بار */  
+        }
+        .carousel-item img {
+            height: 300px; /* تعديل ارتفاع الصور للأجهزة المختلفة */
+            object-fit: cover;
+        }
+        .card {
+            height: 100%;
+            color: white;
+            margin-bottom: 20px; /* تعديل المسافات بين البطاقات */
+            overflow: hidden; /* لتجنب تمدد الكارد في حالة الانيميشن */
+            position: relative; /* لضمان تطبيق الانيميشن بشكل صحيح */
+        }
+        .card:hover .card-body {
+            transform: translateY(-50%);
+        }
+        .card-body {
+            background: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            transition: transform 0.5s ease; /* تأثير الانيميشن هنا */
+        }
+        @media (max-width: 992px) {
+            .card:hover .card-body {
+                transform: none; /* لعدم تطبيق التأثير على الهواتف الذكية والأجهزة اللوحية */
+            }
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: inherit;
+        }
+        .navbar-welcome {
+            flex-grow: 1; /* يضمن أن كلمة الترحيب تأخذ المساحة المتبقية في الناف بار */
+            text-align: center; /* محاذاة نص كلمة الترحيب في الوسط */
+            color: #fff; /* لون النص */
+            font-family: 'Amiri', serif; /* الخط */
+            font-size: 18px; /* حجم الخط */
+            animation-timing-function: steps(5, end); /* أنميشن نبضة لكلمة الترحيب */
+        }
+
+        /* تعديلات لتحسين التوافق مع الأجهزة المختلفة */
+        @media (max-width: 768px) { /* تابلت وهواتف */
+            .navbar-brand {
+                max-width: 130px; /* تحديد عرض أقصى للشعار */
+            }
+            .navbar-brand img {
+                max-width: 100%;
+                height: auto;
+            }
+            .navbar-nav .nav-link {
+                font-size: 14px; /* تحديد حجم النص داخل الروابط */
+            }
+            .carousel-item img {
+                height: 200px; /* تعديل ارتفاع الصور في السلايدر للهواتف */
+            }
+            .card {
+                margin-bottom: 15px; /* تعديل المسافات بين البطاقات للهواتف */
+            }
+            .card-body {
+                padding: 15px; /* تعديل التباعد داخل الكارد للهواتف */
+            }
+        }
+  
+        <head>
+            <style>
+        body {
+            background-color: rgb(83, 195, 98);
+        }
+        .navbar-custom {
+            background-color: #1DA1F2;
+        }
+        .navbar-welcome {
+            flex-grow: 1;
+            text-align: center;
+            color: #fff;
+            font-family: 'Amiri', serif;
+            font-size: 18px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-sm navbar-custom"> <!-- استخدام navbar-sm لتصغير الناف بار -->
+        <a class="navbar-brand" href="#">مانو كافيه</a>
+        <a class="navbar-brand" href="#">
+            <img src="C:\Users\Lenovo\Desktop\front end\mohamed abdelmoez..wepsite w Bootstrab\img\OIP.jpg" alt="شعار مانو كافيه">
+        </a>
+    <div class="navbar-welcome">
+        <span>Welcome To Mano Cafee</span>
+    </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">المدونة <span class="sr-only">(الصفحة الحالية)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">كيف نعمل  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">عن مانو كافيه </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">الرئيسية</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Slider -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="C:\Users\Lenovo\Desktop\front end\mohamed abdelmoez..wepsite w Bootstrab\img\14.jpg" class="d-block w-100 img-fluid" alt="صورة 1">
+            </div>
+            <div class="carousel-item">
+                <img src="C:\Users\Lenovo\Desktop\front end\mohamed abdelmoez..wepsite w Bootstrab\img\11.jpg" class="d-block w-100 img-fluid" alt="صورة 2">
+            </div>
+            <div class="carousel-item">
+                <img src="C:\Users\Lenovo\Desktop\front end\mohamed abdelmoez..wepsite w Bootstrab\img\15.jpg" class="d-block w-100 img-fluid" alt="صورة 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">السابق</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">التالي</span>
+        </a>
+    </div>
+
+    <!-- Cards -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <img src="C:\Users\Lenovo\Desktop\front end\mohamed abdelmoez..wepsite w Bootstrab\img\card1.jpg" class="card-img-top img-fluid" alt="قهوة تركي">
+                    <div class="card-body">
+                        <h5 class="card-title">قهوة تركي</h5>
+                        <p class="card-text">القهوة التركية هي نوع من القهوة التي يتم تحضيرها باستخدام حبوب البن المطحونة بدقة شديدة</p>
+                        <a href="#" class="btn btn-primary">شاهد المزيد</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <img src="C:\Users\Lenovo\Desktop\front end\mohamed abdelmoez..wepsite w Bootstrab\img\card2.jpg" class="card-img-top img-fluid" alt="اسبريسو">
+                    <div class="card-body">
+                        <h5 class="card-title">اسبريسو</h5>
+                        <p class="card-text">الإسبريسو هو نوع من القهوة الإيطالية يُحضّر عن طريق دفع الماء الساخن بسرعة عالية عبر حبوب البن المطحونة بدقة</p>
+                        <a href="#" class="btn btn-primary">شاهد المزيد</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <img src="C:\Users\Lenovo\Desktop\front end\mohamed abdelmoez..wepsite w Bootstrab\img\card3.jpg" class="card-img-top img-fluid" alt="كابتشينو">
+                    <div class="card-body">
+                        <h5 class="card-title">كابتشينو</h5>
+                        <p class="card-text">الكابتشينو هو مشروب قهوة إيطالي يتكون من جرعة إسبريسو واحدة أو مزدوجة ممزوجة بكمية متساوية من الحليب المبخر ورغوة الحليب</p>
+                        <a href="#" class="btn btn-primary">شاهد المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="container my-4">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">البريد الإلكتروني</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                <small id="emailHelp" class="form-text text-muted">لن نشارك بريدك الإلكتروني مع أي شخص آخر.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">إستفسارك</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary">إرسال</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
+                <a href="#"><i class="fab fa-instagram" style="color: #E1306C;"></i></a>
+                <a href="#"><i class="fab fa-linkedin" style="color: #0077B5;"></i></a>
+                <a href="#"><i class="fab fa-facebook" style="color: #1877F2;"></i></a>
+                <a href="#"><i class="fab fa-tiktok" style="color: #000000;"></i></a>
+            </div>
+            <p>© 2024 شروط وأحكام مانو كافيه للمستخدمين</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
